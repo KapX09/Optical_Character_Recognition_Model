@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+
+# Virtual environment
+venv/
+env/
+.env
+.venv/
+
+# Training artifacts (large files)
+model/output/
+dataset/train.csv
+dataset/val.csv
+
+# Generated dataset images (regenerate with script)
+dataset/plates/images/
+
+# Temp folders
+tmp/
+
+# OS files 
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# VS Code
+.vscode/
+
+# Logs
+*.log
+tensorboard_logs/
