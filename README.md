@@ -6,6 +6,10 @@ OCR to Read Characters in ANPR (Automated License Plate Recognition) for Indian 
 Lightweight OCR model trained to read text from cropped Indian license plate images.
 Designed to run **after** a plate detection model takes cropped plate crops as input, outputs plate text.
 
+
+Demo:
+
+![FIRST 10 plates Demo](image.png)
 ---
 
 ## Project Structure
