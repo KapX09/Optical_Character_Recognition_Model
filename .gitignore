@@ -22,6 +22,9 @@ dataset/val.csv
 # Generated dataset images (regenerate with script)
 dataset/plates/images/
 
+# fonts
+dataset/font/CharlesWright-Bold.otf
+
 # Temp folders
 tmp/
 
