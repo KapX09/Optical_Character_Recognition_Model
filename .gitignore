@@ -23,7 +23,7 @@ dataset/val.csv
 dataset/plates/images/
 
 # fonts
-dataset/font/CharlesWright-Bold.otf
+dataset/font/CharlesWright-Bold.otf/
 
 # Temp folders
 tmp/
