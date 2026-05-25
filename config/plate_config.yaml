@@ -1,0 +1,30 @@
+# ── PLATE CONFIG ──────────────────────────────────────────────────────────────
+# Controls how plate images are preprocessed and what characters are recognized.
+
+# Max characters in any plate
+# Indian: MH04AB1234 = 10 chars | Foreign: up to 10
+max_plate_slots: 10
+
+# All characters the model must recognize
+# Padding char '_' included (used for plates shorter than max_plate_slots)
+alphabet: "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ_"
+
+# Padding character — must be in alphabet above
+pad_char: "_"
+
+# Image dimensions fed to the model (width x height)
+# Matches your generated plate aspect ratio (400x120 scaled down)
+img_height: 70
+img_width: 140
+
+# Keep aspect ratio when resizing (adds padding if needed)
+keep_aspect_ratio: false
+
+# Interpolation method for resizing
+interpolation: linear
+
+# Grayscale is faster + sufficient for plate text recognition
+image_color_mode: grayscale
+
+# Padding color when keep_aspect_ratio is true (ignored if false)
+padding_color: 0

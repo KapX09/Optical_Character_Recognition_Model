@@ -1,0 +1,46 @@
+# ── MODEL CONFIG (CCT-S) ──────────────────────────────────────────────────────
+# Compatible with fast-plate-ocr 1.1.0
+
+model: cct
+
+# Pixel rescaling: 1/255
+rescaling:
+  scale: 0.00392156862745098
+  offset: 0.0
+
+# CNN tokenizer — extracts visual features from plate image
+tokenizer:
+  blocks:
+    - layer: Conv2D
+      filters: 32
+      kernel_size: 3
+      activation: relu
+    - layer: BatchNormalization
+    - layer: MaxPooling2D
+      pool_size: 2
+    - layer: Conv2D
+      filters: 64
+      kernel_size: 3
+      activation: relu
+    - layer: BatchNormalization
+    - layer: MaxPooling2D
+      pool_size: 2
+    - layer: Conv2D
+      filters: 128
+      kernel_size: 3
+      activation: relu
+    - layer: BatchNormalization
+  patch_size: 1
+  positional_emb: true
+
+# Transformer encoder — reads character context across the plate
+transformer_encoder:
+  layers: 2
+  heads: 4
+  projection_dim: 128
+  units: [128, 128]
+  activation: gelu
+  attention_dropout: 0.1
+  mlp_dropout: 0.1
+  stochastic_depth: 0.1
+  head_mlp_dropout: 0.2
